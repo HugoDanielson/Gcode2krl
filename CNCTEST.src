@@ -1,0 +1,13 @@
+DEF CNCTEST()
+
+INT counter
+
+
+
+FOR counter = 1 TO 779 
+
+LIN gfCNCPOINT[counter] C_VEL
+
+ENDFOR
+
+END

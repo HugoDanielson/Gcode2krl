@@ -1,0 +1,34 @@
+DEF CNC_LOOP() 
+INT counter 
+
+FOR counter = 1 TO 30000 
+gfCNCPoint1[counter].A=-30 
+LIN gfCNCPoint1[counter] C_VEL 
+ENDFOR 
+
+FOR counter = 1 TO 30000 
+gfCNCPoint2[counter].A=-30 
+LIN gfCNCPoint2[counter] C_VEL 
+ENDFOR 
+
+FOR counter = 1 TO 30000 
+gfCNCPoint3[counter].A=-30 
+LIN gfCNCPoint3[counter] C_VEL 
+ENDFOR 
+
+FOR counter = 1 TO 30000 
+gfCNCPoint4[counter].A=-30 
+LIN gfCNCPoint4[counter] C_VEL 
+ENDFOR 
+
+FOR counter = 1 TO 30000 
+gfCNCPoint5[counter].A=-30 
+LIN gfCNCPoint5[counter] C_VEL 
+ENDFOR 
+
+FOR counter = 1 TO 13477 
+gfCNCPoint6[counter].A=-30 
+LIN gfCNCPoint6[counter] C_VEL 
+ENDFOR 
+
+END

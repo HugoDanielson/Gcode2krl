@@ -1,0 +1,94 @@
+import easygui as g
+import prePreamble as p
+import MakeDirectory as m
+
+#Strategy:
+# Load G-CODE
+# 1 Remove all none move commands
+# 2 Keep track of array Size
+# 3 Append missing data for KRL readable
+# 4 write to temp file
+# 5 Read from temp file
+# 6 Parse temp file into several Dat Files with 30 000 as maximum array size
+# 7 Create corresponding SRC
+
+counter = 0
+gfArrayTracker = 1
+
+#m.DirMaker()
+m.CNCCleaner()
+
+cnc_code_path= 'RobotMilling/Gcode/SideCut.txt'
+cnc_code = open(cnc_code_path, "r")
+lines = cnc_code.readlines()
+cnc_code.close()
+
+
+converted_code_path = 'RobotMilling/Dat/CNCTemp/Temp.dat'
+rewritten_code = open(converted_code_path, 'w')
+
+
+
+
+for line in lines:
+    # Removes all non-move operations
+    if line.startswith('GOTO/') and line.count(',') < 4:
+
+        # Keeps track of array size
+        #counter = counter + 1
+        #gfCncPoint = 'gfCNCPoint[{}]'.format(counter)
+        gfCncPoint = 'gfCNCPoint[]'
+        line = line.replace('GOTO/', gfCncPoint + ' = {X ')
+        # Removes \n from the end of the string
+        line = line.strip()
+        # Split line according to where commas appear
+        line = line.split(',')
+        # Append the appropriate signum for KRL
+        line[1] = ', ' + 'Y ' + line[1] + ', '
+        line[2] = 'Z ' + line[2] + ', '
+        line.append('A 0.000, ')
+        line.append('B 0.000, ')
+        line.append('C 0.000 } ')
+
+        # Write to file
+        for i in range(0, len(line)):
+            rewritten_code.write(line[i])
+        rewritten_code.write('\n')
+
+
+rewritten_code = open(converted_code_path, 'r')
+lines = rewritten_code.readlines()
+rewritten_code.close()
+
+
+final_code_path = 'RobotMilling/Dat/CNC/CNC{}.dat'.format(gfArrayTracker)
+final_code = open(final_code_path, 'w')
+
+for line in lines:
+
+    if counter >= 30000:
+        counter = 0
+        final_code.close()
+        gfArrayTracker = gfArrayTracker + 1
+        final_code_path = 'RobotMilling/Dat/CNC/CNC{}.dat'.format(gfArrayTracker)
+        final_code = open(final_code_path, 'w')
+
+    #else:
+    # Keeps track of array size
+    counter = counter + 1
+    gfCncPoint = 'gfCNCPoint{}[{}]'.format(gfArrayTracker,counter)
+    line = line.replace('gfCNCPoint[]', gfCncPoint)
+
+    # Write to file
+
+
+    for i in range(0, len(line)):
+        final_code.write(line[i])
+
+
+
+final_code.close()
+
+p.run(gfArrayTracker,counter)
+p.src_loop(gfArrayTracker,counter)
+#p.lastrun(counter)
