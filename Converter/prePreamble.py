@@ -27,9 +27,9 @@ def run(numberOfDats,counter):
         dat_code.writelines(lines)
         dat_code.close()
 
-def src_loop(numberOfDats,counter):
+def src_loop(numberOfDats,counter,loop_name):
 
-    loop_name = 'CNC_LOOP'
+    #loop_name = 'CNC_LOOP'
     src_code_editor = open('RobotMilling/Milling/Loop/{}.src'.format(loop_name), 'w')
     src_code = []
     src_code.append('DEF {}() \n'.format(loop_name))
@@ -43,7 +43,7 @@ def src_loop(numberOfDats,counter):
             arraypremable = '\nFOR counter = 1 TO %d \n'% (counter)
         text.append(arraypremable)
 
-        arraypremable = 'gfCNCPoint%s[counter].A=-30 \n' % (i)
+        arraypremable = 'gfCNCPoint%s[counter].A=0 \n' % (i)
         text.append(arraypremable)
         arraypremable = 'LIN gfCNCPoint%s[counter] C_VEL \n' % (i)
         text.append(arraypremable)

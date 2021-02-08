@@ -1,0 +1,72 @@
+﻿IGES to UG
+! INFO-     NX V12.0 / IGES Specification 5.3
+! INFO-      
+! INFO-     Start of Translation: 21-JAN-2021  1:32:44 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Hugo Danielson\Desktop\Test\minotaur.IGS
+! INFO-     SolidWorks IGES file using analytic representation for surfaces         
+! SUMMARY-   
+! SUMMARY-  Summary of Supported IGES Entities in file
+! SUMMARY-   
+! SUMMARY-  Entity Type                    Count
+! SUMMARY-  -----------                    -----
+! SUMMARY-  B-Spline Curve (126/0-4).....: 26072
+! SUMMARY-  Composite Curve (102/0)......:  8688
+! SUMMARY-  B-Spline Surface (128/0-9)...:  4344
+! SUMMARY-  Curve of Surface (142/0).....:  4344
+! SUMMARY-  Trimmed Surface (144/0)......:  4344
+! SUMMARY-  Color Definition (314/0,1)...:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                          47793
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 21-JAN-2021 1:32:45 PM
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 21-JAN-2021  1:32:45 PM
+! INFO-     Filing Part ..: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Part Attribute ..............:     8
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              8
+! INFO-      
+! INFO-     End of Translation: 21-JAN-2021  1:32:46 PM
+! INFO-      
+IGES to UG
+! INFO-     NX V12.0 / IGES Specification 5.3
+! INFO-      
+! INFO-     Start of Translation: 21-JAN-2021  1:34:23 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Hugo Danielson\Desktop\Test\minotaur.IGS
+! INFO-     SolidWorks IGES file using analytic representation for surfaces         
+! SUMMARY-   
+! SUMMARY-  Summary of Supported IGES Entities in file
+! SUMMARY-   
+! SUMMARY-  Entity Type                    Count
+! SUMMARY-  -----------                    -----
+! SUMMARY-  B-Spline Curve (126/0-4).....: 26072
+! SUMMARY-  Composite Curve (102/0)......:  8688
+! SUMMARY-  B-Spline Surface (128/0-9)...:  4344
+! SUMMARY-  Curve of Surface (142/0).....:  4344
+! SUMMARY-  Trimmed Surface (144/0)......:  4344
+! SUMMARY-  Color Definition (314/0,1)...:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                          47793
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 21-JAN-2021 1:34:24 PM
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 21-JAN-2021  1:34:24 PM
+! INFO-     Filing Part ..: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Part Attribute ..............:     8
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              8
+! INFO-      
+! INFO-     End of Translation: 21-JAN-2021  1:34:24 PM
+! INFO-      

@@ -1,0 +1,611 @@
+﻿STEP to UG
+! INFO-     NX STEP AP203 - V12.0
+! INFO-      
+! INFO-     Start of Translation: 21-JAN-2021  12:59:27 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Hugo Danielson\Downloads\minotaur-steve-anas-1.stl.stp
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      STP203
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        /tmp/a392d0c2ce4578f5adb1d27021d782bd.stp
+! SUMMARY-  Date             2021-01-21T04:57:33
+! SUMMARY-  Author           slugdev
+! SUMMARY-  Organization     org
+! SUMMARY-  Pre_Version       
+! SUMMARY-  Orig_System      stltostp
+! SUMMARY-  Authorization     
+! SUMMARY-  Schema_ID        ap203_configuration_controlled_3d_design_of_mechanical_parts_and_assemblies_mim_lf
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:   4344
+! SUMMARY-  axis2_placement_3d .........................................:   4345
+! SUMMARY-  cartesian_point ............................................:  23893
+! SUMMARY-  direction ..................................................:  15206
+! SUMMARY-  edge_curve .................................................:   6516
+! SUMMARY-  edge_loop ..................................................:   4344
+! SUMMARY-  face_bound .................................................:   4344
+! SUMMARY-  line .......................................................:   6516
+! SUMMARY-  open_shell .................................................:      1
+! SUMMARY-  oriented_edge ..............................................:  13032
+! SUMMARY-  plane ......................................................:   4344
+! SUMMARY-  shell_based_surface_model ..................................:      1
+! SUMMARY-  surface_curve ..............................................:   6516
+! SUMMARY-  vector .....................................................:   6516
+! SUMMARY-  vertex_point ...............................................:  10024
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                         109942
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 21-JAN-2021 12:59:35 PM
+! STATUS-    
+! INFO-     STPIN0398  This STEP file contains NO product information.  All
+! INFO-       conformance classes of the AP supported by this STEP translator
+! INFO-       product require that product information be present in the STEP
+! INFO-       file.  The sender of this file and/or the product used to
+! INFO-       generate this STEP file must somehow provide the necessary
+! INFO-       product information.  An attempt will be made to process without
+! INFO-       the product information.  An attempt will be made to generate a
+! INFO-       single level assembly with a single component containing a
+! INFO-       reference set for each shape representation found in the STEP
+! INFO-       file.  The master assembly will have an instance of the component
+! INFO-       for each reference set created.
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 21-JAN-2021  12:59:35 PM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 112949
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15113 - Invalid Loop. : 112947
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+STEP to UG
+! INFO-     NX STEP AP203 - V12.0
+! INFO-      
+! INFO-     Start of Translation: 21-JAN-2021  1:00:05 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Hugo Danielson\Downloads\minotaur-steve-anas-1.stl.stp
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      STP203
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        /tmp/a392d0c2ce4578f5adb1d27021d782bd.stp
+! SUMMARY-  Date             2021-01-21T04:57:33
+! SUMMARY-  Author           slugdev
+! SUMMARY-  Organization     org
+! SUMMARY-  Pre_Version       
+! SUMMARY-  Orig_System      stltostp
+! SUMMARY-  Authorization     
+! SUMMARY-  Schema_ID        ap203_configuration_controlled_3d_design_of_mechanical_parts_and_assemblies_mim_lf
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:   4344
+! SUMMARY-  axis2_placement_3d .........................................:   4345
+! SUMMARY-  cartesian_point ............................................:  23893
+! SUMMARY-  direction ..................................................:  15206
+! SUMMARY-  edge_curve .................................................:   6516
+! SUMMARY-  edge_loop ..................................................:   4344
+! SUMMARY-  face_bound .................................................:   4344
+! SUMMARY-  line .......................................................:   6516
+! SUMMARY-  open_shell .................................................:      1
+! SUMMARY-  oriented_edge ..............................................:  13032
+! SUMMARY-  plane ......................................................:   4344
+! SUMMARY-  shell_based_surface_model ..................................:      1
+! SUMMARY-  surface_curve ..............................................:   6516
+! SUMMARY-  vector .....................................................:   6516
+! SUMMARY-  vertex_point ...............................................:  10024
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                         109942
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 21-JAN-2021 1:00:12 PM
+! STATUS-    
+! INFO-     STPIN0398  This STEP file contains NO product information.  All
+! INFO-       conformance classes of the AP supported by this STEP translator
+! INFO-       product require that product information be present in the STEP
+! INFO-       file.  The sender of this file and/or the product used to
+! INFO-       generate this STEP file must somehow provide the necessary
+! INFO-       product information.  An attempt will be made to process without
+! INFO-       the product information.  An attempt will be made to generate a
+! INFO-       single level assembly with a single component containing a
+! INFO-       reference set for each shape representation found in the STEP
+! INFO-       file.  The master assembly will have an instance of the component
+! INFO-       for each reference set created.
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 21-JAN-2021  1:00:13 PM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 112949
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15113 - Invalid Loop. : 112947
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Sheet body sewing option turned on.
+! STATUS-   Will check for and try to sew any sewable sheet bodies for
+! STATUS-   C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur-steve-anas-1.stl_shapes
+! STATUS-    
+! STATUS-    
+! STATUS-   Retry Sheet body sewing option turned on.
+! STATUS-   Will check for and try to sew any sewable sheet bodies for
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur-steve-anas-1.stl_shapes
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Group .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 21-JAN-2021  1:01:24 PM
+! INFO-     Filing Part ..: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur-steve-anas-1.stl.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         0
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         0
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 21-JAN-2021  1:01:24 PM
+! INFO-      
+STEP to UG
+! INFO-     NX STEP AP203 - V12.0
+! INFO-      
+! INFO-     Start of Translation: 21-JAN-2021  1:18:08 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Hugo Danielson\Desktop\minotaur-steve-anas-1.stl.STP
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      STEP AP203
+! SUMMARY-  Imp_Level        1
+! SUMMARY-  File_Name        minotaur-steve-anas-1.stl.STEP
+! SUMMARY-  Date             2021-01-21T05:13:51
+! SUMMARY-  Author           Unknown
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      SwSTEP 2.0
+! SUMMARY-  Orig_System      SolidWorks 2020
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        ap203_configuration_controlled_3d_design_of_mechanical_parts_and_assemblies_mim_lf
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:   4344
+! SUMMARY-  application_context ........................................:      2
+! SUMMARY-  approval ...................................................:      3
+! SUMMARY-  approval_date_time .........................................:      3
+! SUMMARY-  approval_person_organization ...............................:      3
+! SUMMARY-  approval_role ..............................................:      3
+! SUMMARY-  approval_status ............................................:      3
+! SUMMARY-  axis2_placement_3d .........................................:   4345
+! SUMMARY-  b_spline_curve_with_knots ..................................:   6518
+! SUMMARY-  calendar_date ..............................................:      5
+! SUMMARY-  cartesian_point ............................................:  32593
+! SUMMARY-  cc_design_approval .........................................:      3
+! SUMMARY-  cc_design_date_and_time_assignment .........................:      2
+! SUMMARY-  cc_design_person_and_organization_assignment ...............:      5
+! SUMMARY-  cc_design_security_classification ..........................:      1
+! SUMMARY-  coordinated_universal_time_offset ..........................:      5
+! SUMMARY-  date_and_time ..............................................:      5
+! SUMMARY-  date_time_role .............................................:      2
+! SUMMARY-  design_context .............................................:      1
+! SUMMARY-  direction ..................................................:   8690
+! SUMMARY-  edge_curve .................................................:   6518
+! SUMMARY-  edge_loop ..................................................:   4344
+! SUMMARY-  face_outer_bound ...........................................:   4344
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:      1
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  local_time .................................................:      5
+! SUMMARY-  mechanical_context .........................................:      1
+! SUMMARY-  open_shell .................................................:      1
+! SUMMARY-  organization ...............................................:      1
+! SUMMARY-  oriented_edge ..............................................:  13036
+! SUMMARY-  person .....................................................:      1
+! SUMMARY-  person_and_organization ....................................:      8
+! SUMMARY-  person_and_organization_role ...............................:      5
+! SUMMARY-  plane ......................................................:   4344
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:      1
+! SUMMARY-  product_definition .........................................:      1
+! SUMMARY-  product_definition_formation_with_specified_source .........:      1
+! SUMMARY-  product_definition_shape ...................................:      1
+! SUMMARY-  product_related_product_category ...........................:      1
+! SUMMARY-  security_classification ....................................:      1
+! SUMMARY-  security_classification_level ..............................:      1
+! SUMMARY-  shell_based_surface_model ..................................:      1
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  uncertainty_measure_with_unit ..............................:      1
+! SUMMARY-  vertex_point ...............................................:   2176
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                          91333
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 21-JAN-2021 1:18:09 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 21-JAN-2021  1:18:09 PM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 64481
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15115 - Disjoint Shell. : 64481
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Sheet body sewing option turned on.
+! STATUS-   Will check for and try to sew any sewable sheet bodies for
+! STATUS-   C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur-steve-anas-1.stl.prt
+! STATUS-    
+! STATUS-    
+! STATUS-   Retry Sheet body sewing option turned on.
+! STATUS-   Will check for and try to sew any sewable sheet bodies for
+! STATUS-    
+! STATUS-    
+! STATUS-   Retry Sheet body sewing option turned on.
+! STATUS-   Will check for and try to sew any sewable sheet bodies for
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur-steve-anas-1.stl.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Group .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         1
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         0
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         1
+! INFO-      
+! INFO-     End of Translation: 21-JAN-2021  1:19:16 PM
+! INFO-      
+UG to STEP
+! INFO-     NX STEP AP203 - V12.0
+! INFO-      
+! INFO-     Start of Translation: 21-JAN-2021  1:24:04 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\Minotaurusw.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-  For Part: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\Minotaurusw.prt 
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Part Attribute ..............:     1
+! SUMMARY-  Font ........................:     1
+! SUMMARY-  Color Table .................:     2
+! SUMMARY-  Coordinate System ...........:     3
+! SUMMARY-  Parameter ...................:     1
+! SUMMARY-  Matrix ......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              9
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 21-JAN-2021 1:24:06 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Unknown
+! SUMMARY-  Imp_Level        1
+! SUMMARY-  File_Name        minotaur-steve-anas-1.stl.stp
+! SUMMARY-  Date             2021-01-21T13:24:06+08:00
+! SUMMARY-  Author           Unknown
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      ST-DEVELOPER v16.7
+! SUMMARY-  Orig_System      SIEMENS PLM Software NX 12.0
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  approval ...................................................:      3
+! SUMMARY-  approval_date_time .........................................:      3
+! SUMMARY-  approval_person_organization ...............................:      3
+! SUMMARY-  approval_role ..............................................:      3
+! SUMMARY-  approval_status ............................................:      3
+! SUMMARY-  axis2_placement_3d .........................................:      1
+! SUMMARY-  calendar_date ..............................................:      5
+! SUMMARY-  cartesian_point ............................................:      1
+! SUMMARY-  cc_design_approval .........................................:      3
+! SUMMARY-  cc_design_date_and_time_assignment .........................:      2
+! SUMMARY-  cc_design_person_and_organization_assignment ...............:      4
+! SUMMARY-  cc_design_security_classification ..........................:      1
+! SUMMARY-  conversion_based_unit_and_plane_angle_unit .................:      1
+! SUMMARY-  coordinated_universal_time_offset ..........................:      5
+! SUMMARY-  date_and_time ..............................................:      5
+! SUMMARY-  date_time_role .............................................:      2
+! SUMMARY-  design_context .............................................:      1
+! SUMMARY-  dimensional_exponents ......................................:      1
+! SUMMARY-  direction ..................................................:      2
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:      1
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  local_time .................................................:      5
+! SUMMARY-  mechanical_context .........................................:      1
+! SUMMARY-  organization ...............................................:      7
+! SUMMARY-  person .....................................................:      1
+! SUMMARY-  person_and_organization ....................................:      7
+! SUMMARY-  person_and_organization_role ...............................:      4
+! SUMMARY-  plane_angle_measure_with_unit ..............................:      1
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:      1
+! SUMMARY-  product_definition .........................................:      1
+! SUMMARY-  product_definition_formation_with_specified_source .........:      1
+! SUMMARY-  product_definition_shape ...................................:      1
+! SUMMARY-  product_related_product_category ...........................:      1
+! SUMMARY-  security_classification ....................................:      1
+! SUMMARY-  security_classification_level ..............................:      1
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  uncertainty_measure_with_unit ..............................:      1
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                             88
+! INFO-      
+! INFO-     User interface/default file
+! INFO-     Bspline aprx. value in effect for this translation : 2.540000e-02 mm
+! INFO-      
+! INFO-     Total number of solids input for this translation  :       0
+! INFO-      
+! INFO-     Number of solids processed without problems        :       0
+! INFO-      
+! INFO-     Number of solids with problems output as sheets    :       0
+! INFO-      
+! INFO-     Number of solids not processed                     :       0
+! INFO-      
+! INFO-     End of Translation: 21-JAN-2021  1:24:06 PM
+! INFO-      
+STEP to UG
+! INFO-     NX STEP AP214 - V12.0
+! INFO-      
+! INFO-     Start of Translation: 21-JAN-2021  1:35:02 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Hugo Danielson\Desktop\minotaur-steve-anas-1.stl.STP
+! INFO-      
+! INFO-     No solids in STEP file. 
+! INFO-     Available surface and wireframe data will be imported. 
+! INFO-      
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      STEP AP203
+! SUMMARY-  Imp_Level        1
+! SUMMARY-  File_Name        minotaur-steve-anas-1.stl.STEP
+! SUMMARY-  Date             2021-01-21T05:13:51
+! SUMMARY-  Author           Unknown
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      SwSTEP 2.0
+! SUMMARY-  Orig_System      SolidWorks 2020
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        ap203_configuration_controlled_3d_design_of_mechanical_parts_and_assemblies_mim_lf
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:   4344
+! SUMMARY-  application_context ........................................:      2
+! SUMMARY-  approval ...................................................:      3
+! SUMMARY-  approval_status ............................................:      3
+! SUMMARY-  axis2_placement_3d .........................................:   4345
+! SUMMARY-  b_spline_curve_with_knots ..................................:   6518
+! SUMMARY-  calendar_date ..............................................:      3
+! SUMMARY-  cartesian_point ............................................:  32593
+! SUMMARY-  coordinated_universal_time_offset ..........................:      3
+! SUMMARY-  date_and_time ..............................................:      3
+! SUMMARY-  design_context .............................................:      1
+! SUMMARY-  direction ..................................................:   8690
+! SUMMARY-  edge_curve .................................................:   6518
+! SUMMARY-  edge_loop ..................................................:   4344
+! SUMMARY-  face_outer_bound ...........................................:   4344
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:      1
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  local_time .................................................:      3
+! SUMMARY-  mechanical_context .........................................:      1
+! SUMMARY-  open_shell .................................................:      1
+! SUMMARY-  organization ...............................................:      1
+! SUMMARY-  oriented_edge ..............................................:  13036
+! SUMMARY-  person .....................................................:      1
+! SUMMARY-  person_and_organization ....................................:      3
+! SUMMARY-  plane ......................................................:   4344
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:      1
+! SUMMARY-  product_definition .........................................:      1
+! SUMMARY-  product_definition_formation_with_specified_source .........:      1
+! SUMMARY-  product_definition_shape ...................................:      1
+! SUMMARY-  product_related_product_category ...........................:      1
+! SUMMARY-  shell_based_surface_model ..................................:      1
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  uncertainty_measure_with_unit ..............................:      1
+! SUMMARY-  vertex_point ...............................................:   2176
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                          91291
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 21-JAN-2021 1:35:03 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 21-JAN-2021  1:35:03 PM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 64481
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15115 - Disjoint Shell. : 64481
+! ERROR-     
+! INFO-     Could not create sheet body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many sheet body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! INFO-     Filing Part ..: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur-steve-anas-1.stl.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Group .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         1
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         0
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         1
+! INFO-      
+! INFO-     End of Translation: 21-JAN-2021  1:35:26 PM
+! INFO-      
+STEP to UG
+! INFO-     NX STEP AP203 - V12.0
+! INFO-      
+! INFO-     Start of Translation: 21-JAN-2021  8:26:03 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur-steve-anas-1.stl.stp
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      STEP AP203
+! SUMMARY-  Imp_Level        1
+! SUMMARY-  File_Name        minotaur-steve-anas-1.stl.stp
+! SUMMARY-  Date             2021-01-21T12:24:31
+! SUMMARY-  Author           Unknown
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      SwSTEP 2.0
+! SUMMARY-  Orig_System      SolidWorks 2020
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        ap203_configuration_controlled_3d_design_of_mechanical_parts_and_assemblies_mim_lf
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:   4344
+! SUMMARY-  application_context ........................................:      2
+! SUMMARY-  approval ...................................................:      3
+! SUMMARY-  approval_date_time .........................................:      3
+! SUMMARY-  approval_person_organization ...............................:      3
+! SUMMARY-  approval_role ..............................................:      3
+! SUMMARY-  approval_status ............................................:      3
+! SUMMARY-  axis2_placement_3d .........................................:   4345
+! SUMMARY-  calendar_date ..............................................:      5
+! SUMMARY-  cartesian_point ............................................:  13035
+! SUMMARY-  cc_design_approval .........................................:      3
+! SUMMARY-  cc_design_date_and_time_assignment .........................:      2
+! SUMMARY-  cc_design_person_and_organization_assignment ...............:      5
+! SUMMARY-  cc_design_security_classification ..........................:      1
+! SUMMARY-  closed_shell ...............................................:      1
+! SUMMARY-  coordinated_universal_time_offset ..........................:      5
+! SUMMARY-  date_and_time ..............................................:      5
+! SUMMARY-  date_time_role .............................................:      2
+! SUMMARY-  design_context .............................................:      1
+! SUMMARY-  direction ..................................................:  15206
+! SUMMARY-  edge_curve .................................................:   6516
+! SUMMARY-  edge_loop ..................................................:   4344
+! SUMMARY-  face_outer_bound ...........................................:   4344
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:      1
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  line .......................................................:   6516
+! SUMMARY-  local_time .................................................:      5
+! SUMMARY-  manifold_solid_brep ........................................:      1
+! SUMMARY-  mechanical_context .........................................:      1
+! SUMMARY-  organization ...............................................:      1
+! SUMMARY-  oriented_edge ..............................................:  13032
+! SUMMARY-  person .....................................................:      1
+! SUMMARY-  person_and_organization ....................................:      8
+! SUMMARY-  person_and_organization_role ...............................:      5
+! SUMMARY-  plane ......................................................:   4344
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:      1
+! SUMMARY-  product_definition .........................................:      1
+! SUMMARY-  product_definition_formation_with_specified_source .........:      1
+! SUMMARY-  product_definition_shape ...................................:      1
+! SUMMARY-  product_related_product_category ...........................:      1
+! SUMMARY-  security_classification ....................................:      1
+! SUMMARY-  security_classification_level ..............................:      1
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  uncertainty_measure_with_unit ..............................:      1
+! SUMMARY-  vector .....................................................:   6516
+! SUMMARY-  vertex_point ...............................................:   2174
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                          84797
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 21-JAN-2021 8:26:04 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 21-JAN-2021  8:26:04 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 3500
+! STATUS-    
+! STATUS-   removing any duplicate geometry
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-   removing any unnecessary topology
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Hugo Danielson\Desktop\Milling\Minotaur\minotaur-steve-anas-1.stl.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         1
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         1
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 21-JAN-2021  8:26:07 PM
+! INFO-      
