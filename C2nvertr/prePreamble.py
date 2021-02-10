@@ -7,7 +7,7 @@ def run(numberOfDats,counter):
 
     while i < numberOfDats:
         i += 1
-        dat_code_path = 'RobotMilling/Dat/CNC/CNC{}.dat'.format(i)
+        dat_code_path = 'RobotMilling/Milling/CNC/DAT/CNC{}.dat'.format(i)
         dat_code = open(dat_code_path, "r")
         lines = dat_code.readlines()
         dat_code.close()
@@ -33,7 +33,7 @@ def run(numberOfDats,counter):
 def src_loop(numberOfDats,counter,loop_name):
 
     #loop_name = 'CNC_LOOP'
-    src_code_editor = open('RobotMilling/Milling/Loop/{}.src'.format(loop_name), 'w')
+    src_code_editor = open('RobotMilling/Milling/CNC/Loop/{}.src'.format(loop_name), 'w')
     src_code = []
     src_code.append('DEF {}() \n'.format(loop_name))
     src_code.append('INT counter \n')

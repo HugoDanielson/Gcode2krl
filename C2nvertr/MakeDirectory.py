@@ -2,11 +2,6 @@ import os
 
 def DirMaker():
     GcodeDir()
-    try:
-        path ="RobotMilling/Dat/CNC"
-        os.makedirs(path)
-    except OSError:
-        print(path + "Exists")
 
     try:
         path ="RobotMilling/Milling"
@@ -16,12 +11,26 @@ def DirMaker():
         print(path + "Exists")
 
     try:
-        path ="RobotMilling/Milling/Loop"
+        path = "RobotMilling/Milling/CNC/"
+
+        os.makedirs(path)
+    except OSError:
+        print(path + "Exists")
+
+    try:
+        path = "RobotMilling/Milling/CNC/Loop"
         os.makedirs(path)
 
     except OSError:
         print(path + "Exists")
 
+
+    try:
+        path = "RobotMilling/Milling/CNC/Dat/"
+
+        os.makedirs(path)
+    except OSError:
+        print(path + "Exists")
 
 
 def DirRemover():
@@ -47,13 +56,22 @@ def GcodeDir():
 
 def CNCCleaner():
     try:
-        mydir = 'RobotMilling/Dat/CNC'
+        mydir = 'RobotMilling/Milling/CNC/Loop'
+        for f in os.listdir(mydir):
+            if not f.endswith(".src"):
+                continue
+            os.remove(os.path.join(mydir, f))
+
+    except OSError:
+        print("Oh christ Some Error " + mydir)
+
+    try:
+        mydir = 'RobotMilling/Milling/CNC/Dat'
         for f in os.listdir(mydir):
             if not f.endswith(".dat"):
                 continue
             os.remove(os.path.join(mydir, f))
 
     except OSError:
-        print("Oh christ Some Error")
-
+        print("Oh christ Some Error " + mydir)
 

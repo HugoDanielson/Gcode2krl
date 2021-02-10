@@ -15,6 +15,7 @@ import MakeDirectory as m
 counter = 0
 gfArrayTracker = 1
 grfeedrate = '0'
+tempfeedrate = '0'
 #m.DirMaker()
 m.CNCCleaner()
 
@@ -33,21 +34,27 @@ rewritten_code = open(converted_code_path, 'w')
 for line in lines:
     # Removes all non-move operations
     if line.startswith('RAPID'):
-        grfeedrate = str(100)
+        grfeedrate = str(2000)
 
     elif line.startswith('FEDRAT/'):
         line = line.replace('MMPM,', '')
         line = line.strip()
         line = line.split('/')
-        grfeedrate = str(float(line[1])/60)
+
+        tempfeedrate = str(float(line[1]) / 60)
+        grfeedrate = tempfeedrate
+
+
+
 
 
     elif line.startswith('GOTO/'):
-        gfCncPoint = 'gfCNCPoint[]'
 
         line = line.replace('GOTO/', '')
         line = line.strip()
         line = line.split(',')
+
+
 
         # Append the appropriate signum for KRL
 
@@ -73,20 +80,21 @@ for line in lines:
             line.append('C 0.000 } ')
             line.append(', grFeedrate ' + grfeedrate + '}')
 
+
         # Write to file
         for i in range(0, len(line)):
             rewritten_code.write(line[i])
         rewritten_code.write('\n')
-
-
-
+    else:
+        grfeedrate = tempfeedrate
 
 rewritten_code = open(converted_code_path, 'r')
 lines = rewritten_code.readlines()
 rewritten_code.close()
 
 
-final_code_path = 'RobotMilling/Dat/CNC/CNC{}.dat'.format(gfArrayTracker)
+#final_code_path = 'RobotMilling/Dat/CNC/CNC{}.dat'.format(gfArrayTracker)
+final_code_path = 'RobotMilling/Milling/CNC/Dat/CNC{}.dat'.format(gfArrayTracker)
 final_code = open(final_code_path, 'w')
 
 
@@ -98,7 +106,7 @@ for line in lines:
         final_code.close()
 
         gfArrayTracker = gfArrayTracker + 1
-        final_code_path = 'RobotMilling/Dat/CNC/CNC{}.dat'.format(gfArrayTracker)
+        final_code_path = 'RobotMilling/Milling/CNC/Dat/CNC{}.dat'.format(gfArrayTracker)
 
         final_code = open(final_code_path, 'w')
 

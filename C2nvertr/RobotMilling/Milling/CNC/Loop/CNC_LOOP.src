@@ -1,19 +1,9 @@
 DEF CNC_LOOP() 
 INT counter 
 
-FOR counter = 1 TO 30000 
+FOR counter = 1 TO 1468 
 ChangeSpeed(gsCNC1[counter].grfeedrate)
 LIN gsCNC1[counter].fCNC C_VEL 
-ENDFOR 
-
-FOR counter = 1 TO 30000 
-ChangeSpeed(gsCNC2[counter].grfeedrate)
-LIN gsCNC2[counter].fCNC C_VEL 
-ENDFOR 
-
-FOR counter = 1 TO 11945 
-ChangeSpeed(gsCNC3[counter].grfeedrate)
-LIN gsCNC3[counter].fCNC C_VEL 
 ENDFOR 
 
 END 
