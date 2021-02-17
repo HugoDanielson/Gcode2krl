@@ -1,0 +1,78 @@
+&ACCESS RVO
+DEF CNCTEST()
+   INT lnActSt,lnUsedBase,lnUsedTool,lnBaseNr
+   INT lnJobNr, lnCounter,lnCounter2,lnSegments
+   INT counter
+   REAL lrAmountCut, lrWorkPieceSize,lrRadius,lrDepthOfCut
+   FRAME lfZcut
+   FRAME lfToolDiamShift
+   FRAME lfStartMillingPos
+   FRAME lfBaseShift
+   FRAME lfBaseCycleZ
+   FRAME lfBaseCycleShift
+   FRAME lfCircAuxPoint1
+   FRAME lfCircEndPoint1
+
+   CONTINUE
+   ;IF ($T1 OR $T2)THEN
+   GLOBAL INTERRUPT DECL 3 WHEN $STOPMESS==TRUE DO IR_STOPM ( )
+   INTERRUPT ON 3
+   BAS (#INITMOV,0)
+   lnActSt = 1
+   PTP $POS_ACT
+   PTP lAstartPos
+
+   gbRobControlActive = FALSE
+
+   ; Used Base and tool
+   lnUsedBase = 11
+   lnUsedTool = 11
+
+   gnLastToolNr = 4
+   lnBaseNr = 24
+   gfMillingOffset = $NULLFRAME
+
+   lfZcut = $NULLFRAME
+   lfZcut.Z = 0
+   lfBaseShift = {X 2,Y -1.5, Z 0,A 0,B 0,C 0}
+   ;lfBaseShift = {X 18,Y 16, Z -3,A 0,B 0,C 0}
+   ;lfBaseShift.x = lfBaseShift.x - grTool_Diameter[gnLastToolNr]/2
+   ;lfBaseShift.y = lfBaseShift.y - grTool_Diameter[gnLastToolNr]/2
+
+   ;lfBaseShift = {X 50,Y 48.5,Z -3,A 0,B 0,C 0}
+   lfBaseCycleZ = $NULLFRAME
+   lfBaseCycleZ.Z = 0
+
+   ;*************************************************************
+   ;*                SPINDLE START + CUT PARAMS                 *
+   ;*************************************************************
+   grUsedRPM = GetMillingRPM(grTool_VC[gnLastToolNr], grTool_Diameter[gnLastToolNr])
+   grUsedMillingSpeed = GetMillingSpeed(grUsedRPM, grTool_ToothCount[gnLastToolNr], grTool_FeedPerTooth[gnLastToolNr])
+
+   SpindleRun(TRUE,grUsedRPM,#CLOCKWISE)
+
+   lfBaseCycleZ = $NULLFRAME
+   lfBaseCycleZ.Z = 0
+   BASE_DATA[lnUsedBase] = BASE_DATA[lnBaseNr] : lfBaseShift : lfBaseCycleZ
+   TOOL_DATA[lnUsedTool] = TOOL_DATA[gnLastToolNr] :{X 0,Y 0,Z 0,A 270,B 0,C 0}
+
+   grUsedMillingSpeed = grUsedMillingSpeed*4
+   MoveSettings(lnUsedBase, lnUsedTool, 100, grUsedMillingSpeed)
+   ;MoveSettings(lnUsedBase, lnUsedTool, 100, 10)
+
+
+
+
+
+
+
+   LIN_REL {Z 100} C_VEL #BASE
+      TRIGGER WHEN DISTANCE=1 DELAY=0 DO  SpindleRun(FALSE,0,#CLOCKWISE) PRIO=-1
+   MoveSettings(lnUsedBase, lnUsedTool, 100, 500)
+   LIN_REL {Z 100} C_VEL #BASE
+
+   BAS (#INITMOV,0)
+   PTP lAstartPos
+
+
+END
