@@ -1,0 +1,33 @@
+DEF Mill_FRONT_Loop() 
+INT counter 
+
+FOR counter = 1 TO 30000 
+     ChangeSpeed(gsMill_FRONT1[counter].grfeedrate)
+     LIN gsMill_FRONT1[counter].fCNC C_VEL 
+ENDFOR 
+
+FOR counter = 1 TO 4105 
+     ChangeSpeed(gsMill_FRONT2[counter].grfeedrate)
+     LIN gsMill_FRONT2[counter].fCNC C_VEL 
+ENDFOR 
+
+END 
+ 
+ 
+DEF ChangeSpeed(lrFeedRate:IN) 
+     REAL lrFeedRate 
+ 
+ 
+     LDAT_ACT.VEL = lrFeedRate * (DEF_VEL_CP / (DEF_VEL_CP*1000)) 
+ 
+        IF (lrFeedRate < 1.0) THEN 
+             PDAT_ACT.VEL = 1 
+             PDAT_ACT.VEL = lrFeedRate 
+        ENDIF 
+ 
+     BAS(#CP_DAT) 
+     BAS(#PTP_DAT) 
+
+END 
+ 
+ 

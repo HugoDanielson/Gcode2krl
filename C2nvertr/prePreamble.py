@@ -1,25 +1,24 @@
 
 
-def run(numberOfDats,counter):
+def run(numberOfDats, counter, point_name, path_name):
 
     end_text = '\nENDDAT'
     i = 0
-
     while i < numberOfDats:
         i += 1
-        dat_code_path = 'RobotMilling/Milling/CNC/DAT/CNC{}.dat'.format(i)
+        dat_code_path = 'RobotMilling/Milling/CNC/DAT/{}{}.dat'.format(path_name, i)
         dat_code = open(dat_code_path, "r")
         lines = dat_code.readlines()
         dat_code.close()
         dat_code = open(dat_code_path, 'w')
-        pre_text = 'DEFDAT CNC%d Public \n' % (i)
-        pre_text1 = 'GLOBAL STRUC sCNC%d FRAME fCNC, INT grFeedrate \n' % (i)
+        pre_text = 'DEFDAT %s%d Public \n' % (path_name, i)
+        pre_text1 = 'GLOBAL STRUC s%s%d FRAME fCNC, INT grFeedrate \n' % (path_name, i)
 
 
         if i != numberOfDats:
-            arraypremable = 'DECL GLOBAL sCNC%s gsCNC%s[%d] \n \n \n' % (i,i, 30000)
+            arraypremable = 'DECL GLOBAL s%s%s %s%s[%d] \n \n \n' % (path_name,i, point_name, i, 30000)
         else:
-            arraypremable = 'DECL GLOBAL sCNC%s gsCNC%s[%d]  \n \n \n' % (i,i, counter)
+            arraypremable = 'DECL GLOBAL s%s%s %s%s[%d]  \n \n \n' % (path_name,i, point_name, i, counter)
 
         lines.insert(0,arraypremable)
         lines.insert(0, pre_text1)
@@ -30,7 +29,7 @@ def run(numberOfDats,counter):
         dat_code.writelines(lines)
         dat_code.close()
 
-def src_loop(numberOfDats,counter,loop_name):
+def src_loop(numberOfDats, counter, loop_name, point_name):
 
     #loop_name = 'CNC_LOOP'
     src_code_editor = open('RobotMilling/Milling/CNC/Loop/{}.src'.format(loop_name), 'w')
@@ -48,8 +47,8 @@ def src_loop(numberOfDats,counter,loop_name):
 
         #arraypremable = 'gfCNCPoint%s[counter].A=0 \n' % (i)
         #text.append(arraypremable)
-        arraypremable = 'LIN gsCNC%s[counter].fCNC C_VEL \n' % (i)
-        changeSpeedpremable = 'ChangeSpeed(gsCNC%s[counter].grfeedrate)\n' % (i)
+        arraypremable =       '     LIN %s%s[counter].fCNC C_VEL \n' % (point_name, i)
+        changeSpeedpremable = '     ChangeSpeed(%s%s[counter].grfeedrate)\n' % (point_name, i)
         EnDForpremable = 'ENDFOR \n'
         text.append(changeSpeedpremable)
         text.append(arraypremable)

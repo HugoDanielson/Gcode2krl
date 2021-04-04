@@ -1,6 +1,6 @@
-import easygui as g
 import prePreamble as p
 import MakeDirectory as m
+from prePreamble import ABCTracker
 
 #Strategy:
 # Load G-CODE
@@ -12,23 +12,21 @@ import MakeDirectory as m
 # 6 Parse temp file into several Dat Files with 30 000 as maximum array size
 # 7 Create corresponding SRC
 
-counter = 0
-gfArrayTracker = 1
+
 grfeedrate = '0'
 tempfeedrate = '0'
 #m.DirMaker()
 m.CNCCleaner()
 
-
+ABCTracker = ABCTracker()
 cnc_code_path= 'RobotMilling/Gcode/CNC.txt'
-cnc_code = open(cnc_code_path, "r")
-lines = cnc_code.readlines()
-cnc_code.close()
-
-
 converted_code_path = 'RobotMilling/Dat/CNCTemp/Temp.dat'
+final_code_path = 'RobotMilling/Milling/CNC/Dat/CNC1.dat'
+cnc_code = open(cnc_code_path, "r")
 rewritten_code = open(converted_code_path, 'w')
 
+lines = cnc_code.readlines()
+cnc_code.close()
 
 
 
@@ -38,54 +36,19 @@ for line in lines:
         grfeedrate = str(2000)
 
     elif line.startswith('FEDRAT/'):
-        line = line.replace('MMPM,', '')
-        line = line.strip()
-        line = line.split('/')
 
-        tempfeedrate = str(float(line[1]) / 60)
-        grfeedrate = tempfeedrate
-
-
+        tempfeedrate,grfeedrate = p.feed_rate_handler(line)
 
 
 
     elif line.startswith('GOTO/'):
 
-        line = line.replace('GOTO/', '')
-        line = line.strip()
-        line = line.split(',')
+       lines = p.frame_maker(line,grfeedrate,ABCTracker)
 
+       for i in range(0, len(lines)):
+           rewritten_code.write(lines[i])
+       rewritten_code.write('\n')
 
-
-        # Append the appropriate signum for KRL
-
-        if len(line) == 6:
-
-            #line[0] = gfCncPoint + ' = {X ' + line[0] + ', '
-            line[0] =  '{X ' + line[0] + ', '
-            line[1] =  'Y ' + line[1] + ', '
-            line[2] = 'Z ' + line[2] + ', '
-            line[3] = 'A 0.000, '
-            line[4] = 'B 0.000, '
-            line[5] = 'C 0.000 ' + '}'
-            line.append(', grFeedrate ' + grfeedrate + '}' )
-
-        elif len(line) == 3:
-
-            # line[0] = gfCncPoint + ' = {X ' + line[0] + ', '
-            line[0] = '{X ' + line[0] + ', '
-            line[1] =  'Y ' + line[1] + ', '
-            line[2] = 'Z ' + line[2] + ', '
-            line.append('A 0.000, ')
-            line.append('B 0.000, ')
-            line.append('C 0.000 } ')
-            line.append(', grFeedrate ' + grfeedrate + '}')
-
-
-        # Write to file
-        for i in range(0, len(line)):
-            rewritten_code.write(line[i])
-        rewritten_code.write('\n')
     else:
         grfeedrate = tempfeedrate
 
@@ -94,42 +57,7 @@ lines = rewritten_code.readlines()
 rewritten_code.close()
 
 
-#final_code_path = 'RobotMilling/Dat/CNC/CNC{}.dat'.format(gfArrayTracker)
-final_code_path = 'RobotMilling/Milling/CNC/Dat/CNC{}.dat'.format(gfArrayTracker)
-final_code = open(final_code_path, 'w')
-
-
-
-for line in lines:
-
-    if counter >= 30000:
-        counter = 0
-        final_code.close()
-
-        gfArrayTracker = gfArrayTracker + 1
-        final_code_path = 'RobotMilling/Milling/CNC/Dat/CNC{}.dat'.format(gfArrayTracker)
-
-        final_code = open(final_code_path, 'w')
-
-
-    #else:
-    # Keeps track of array size
-    counter = counter + 1
-    gfCncPoint = 'gsCNC%s[%d] = {fCnC '%(gfArrayTracker,counter)
-    line = gfCncPoint + line
-
-
-    # Write to file
-
-
-
-    for i in range(0, len(line)):
-        final_code.write(line[i])
-
-
-
-final_code.close()
-
+gfArrayTracker,counter = p.final_code_handler(final_code_path,lines)
 
 p.run(gfArrayTracker,counter)
 p.src_loop(gfArrayTracker,counter,'CNC_LOOP')
